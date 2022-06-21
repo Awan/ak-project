@@ -8,6 +8,12 @@ pipeline {
                 }
             }
         }
+    post {
+        failure {
+            sh 'cd cfg'
+            sh 'git pull origin master'
+        }
+    }
 }
 
 
