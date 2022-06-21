@@ -4,7 +4,7 @@ pipeline {
             stage('get_code_message') {
                 steps {
                     sh 'echo "Getting code from GitHub"'
-                    sh 'git clone https://github.com/Awan/cfg.git'
+                    sh 'git clone https://github.com/Awan/cfg.git || echo "This repository is already cloned" '
                 }
             }
         }
